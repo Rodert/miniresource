@@ -1,0 +1,33 @@
+<view class="container">
+  <!-- 分类网格 -->
+  <view class="category-grid">
+    <view class="category-section" wx:for="{{categories}}" wx:key="id">
+      <view class="category-header">
+        <text class="category-title">{{item.name}}</text>
+        <text class="category-count text-secondary">{{categoryResources[item.id].length}}个资源</text>
+      </view>
+      
+      <view class="resource-grid">
+        <view 
+          class="resource-item card" 
+          wx:for="{{categoryResources[item.id]}}" 
+          wx:key="id" 
+          wx:for-item="resource"
+          bindtap="onResourceTap"
+          data-id="{{resource.id}}"
+        >
+          <view class="resource-icon">
+            <icon type="{{item.icon}}" size="28"></icon>
+          </view>
+          <view class="resource-info">
+            <text class="resource-title text-primary">{{resource.title}}</text>
+            <text class="resource-desc text-secondary text-small">{{resource.description}}</text>
+          </view>
+          <view class="resource-tags">
+            <text class="tag text-small" wx:for="{{resource.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

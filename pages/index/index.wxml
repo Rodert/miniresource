@@ -1,0 +1,41 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar" bindtap="onSearchTap">
+    <icon type="search" size="14"></icon>
+    <text>搜索资源</text>
+  </view>
+
+  <!-- 资源列表时间轴 -->
+  <view class="timeline">
+    <block wx:if="{{!loading}}">
+      <view class="timeline-group" wx:for="{{groupedResources}}" wx:key="date">
+        <view class="timeline-date">{{item.date}}</view>
+        <view class="timeline-items">
+          <view class="timeline-item" wx:for="{{item.items}}" wx:key="id" wx:for-item="resource">
+            <view class="timeline-dot"></view>
+            <view class="timeline-content card" bindtap="onResourceTap" data-id="{{resource.id}}">
+              <view class="resource-header">
+                <view class="resource-left">
+                  <view class="resource-icon-box">
+                    <text class="resource-icon">{{resource.icon}}</text>
+                  </view>
+                  <view class="resource-info">
+                    <text class="resource-title">{{resource.title}}</text>
+                    <text class="tag">{{resource.tags[0]}}</text>
+                  </view>
+                </view>
+                <view class="copy-btn" catchtap="onCopyUrl" data-url="{{resource.url}}">
+                  <text class="copy-icon">复制</text>
+                  <text class="copy-number">{{resource.copyCount || 0}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="loading" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+  </view>
+</view>

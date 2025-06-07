@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <view class="search-bar">
+      <icon type="search" size="14"></icon>
+      <input 
+        class="search-input"
+        placeholder="搜索资源"
+        value="{{keyword}}"
+        bindinput="onInput"
+        confirm-type="search"
+      />
+      <icon 
+        wx:if="{{keyword}}"
+        type="clear" 
+        size="14" 
+        bindtap="onClear"
+      ></icon>
+    </view>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view class="search-results" wx:if="{{keyword}}">
+    <view class="result-header">
+      <text class="result-count">找到 {{searchResults.length}} 个资源</text>
+    </view>
+    
+    <view class="result-list">
+      <block wx:if="{{!searching}}">
+        <view 
+          class="result-item card"
+          wx:for="{{searchResults}}"
+          wx:key="id"
+          bindtap="onResourceTap"
+          data-id="{{item.id}}"
+        >
+          <view class="result-title">{{item.title}}</view>
+          <view class="result-desc text-secondary">{{item.description}}</view>
+          <view class="result-tags">
+            <text class="tag text-small" wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">{{tag}}</text>
+          </view>
+        </view>
+      </block>
+      
+      <view class="searching" wx:if="{{searching}}">
+        <text>搜索中...</text>
+      </view>
+      
+      <view class="no-result" wx:if="{{!searching && searchResults.length === 0}}">
+        <text>未找到相关资源</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索提示 -->
+  <view class="search-placeholder" wx:if="{{!keyword}}">
+    <text>输入关键词搜索资源</text>
+  </view>
+</view>

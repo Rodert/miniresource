@@ -1,0 +1,41 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 通用文本样式 */
+.text-primary {
+  color: #333333;
+}
+
+.text-secondary {
+  color: #666666;
+}
+
+.text-small {
+  font-size: 24rpx;
+}
+
+/* 通用边距 */
+.margin-top {
+  margin-top: 20rpx;
+}
+
+.padding {
+  padding: 20rpx;
+}
+
+/* 卡片样式 */
+.card {
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin: 20rpx;
+  padding: 20rpx;
+}

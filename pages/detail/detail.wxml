@@ -1,0 +1,31 @@
+<view class="container" wx:if="{{resource}}">
+  <!-- 资源卡片 -->
+  <view class="resource-card card">
+    <view class="resource-header">
+      <view class="resource-title">{{resource.title}}</view>
+      <view class="resource-time text-secondary text-small">{{resource.createTime}}</view>
+    </view>
+
+    <view class="resource-content">
+      <view class="resource-desc">{{resource.description}}</view>
+      
+      <view class="resource-tags">
+        <text class="tag" wx:for="{{resource.tags}}" wx:key="*this">{{item}}</text>
+      </view>
+
+      <view class="resource-url">
+        <text class="url-text text-secondary">{{resource.url}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="action-btn" bindtap="copyUrl">
+      <text>复制链接</text>
+    </button>
+    <button class="action-btn primary" bindtap="openUrl">
+      <text>在浏览器打开</text>
+    </button>
+  </view>
+</view>

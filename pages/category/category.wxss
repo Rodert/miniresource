@@ -1,0 +1,90 @@
+/* 容器样式 */
+.container {
+  padding: 20rpx;
+  background-color: #f6f6f6;
+}
+
+/* 分类网格样式 */
+.category-grid {
+  width: 100%;
+}
+
+.category-section {
+  margin-bottom: 40rpx;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 0 10rpx;
+}
+
+.category-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.category-count {
+  font-size: 24rpx;
+}
+
+/* 资源网格样式 */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+
+.resource-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+  margin-bottom: 16rpx;
+}
+
+.resource-info {
+  flex: 1;
+}
+
+.resource-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.resource-desc {
+  font-size: 24rpx;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12rpx;
+}
+
+/* 标签样式 */
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.tag {
+  font-size: 20rpx;
+  color: #666;
+  background: #f0f0f0;
+  padding: 4rpx 12rpx;
+  border-radius: 20rpx;
+}

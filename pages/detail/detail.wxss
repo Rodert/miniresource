@@ -1,0 +1,93 @@
+/* 容器样式 */
+.container {
+  padding: 30rpx;
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+/* 资源卡片样式 */
+.resource-card {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.resource-header {
+  margin-bottom: 30rpx;
+}
+
+.resource-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.resource-time {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.resource-content {
+  color: #333;
+}
+
+.resource-desc {
+  font-size: 30rpx;
+  line-height: 1.6;
+  margin-bottom: 30rpx;
+}
+
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 30rpx;
+}
+
+.tag {
+  font-size: 24rpx;
+  color: #666;
+  background: #f0f0f0;
+  padding: 8rpx 20rpx;
+  border-radius: 30rpx;
+}
+
+.resource-url {
+  background: #f8f8f8;
+  padding: 20rpx;
+  border-radius: 8rpx;
+}
+
+.url-text {
+  font-size: 26rpx;
+  word-break: break-all;
+}
+
+/* 操作按钮样式 */
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+  padding: 0 30rpx;
+}
+
+.action-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+}
+
+.action-btn.primary {
+  background: #007aff;
+  color: #fff;
+}
+
+.action-btn::after {
+  border: none;
+}

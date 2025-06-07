@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "程序员大王极速版"
+} 
